@@ -10,6 +10,23 @@ import Foundation
 
 public class Calculator {
     public func calculate(_ args: [String]) -> Int {
+        if (args.count == 3) {
+            switch args[1] {
+            case "+":
+                return Int(args[0])! + Int(args[2])!
+            case "-":
+                return Int(args[0])! - Int(args[2])!
+            case "*":
+                return Int(args[0])! * Int(args[2])!
+            case "/":
+                return Int(args[0])! / Int(args[2])!
+            case "%":
+                return Int(args[0])! % Int(args[2])!
+            default:
+                return 01293091231212
+            }
+        }
+        return 1239
     }
     
     public func calculate(_ arg: String) -> Int {
