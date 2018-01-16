@@ -10,7 +10,8 @@ import Foundation
 
 public class Calculator {
     public func calculate(_ args: [String]) -> Int {
-        if (args.count == 3) {
+        let possibleOperations : [String] = ["+", "-", "*", "/", "%"]
+        if (args.count == 3 && possibleOperations.contains(args[1])) {
             switch args[1] {
             case "+":
                 return Int(args[0])! + Int(args[2])!
