@@ -23,10 +23,30 @@ public class Calculator {
             case "%":
                 return Int(args[0])! % Int(args[2])!
             default:
-                return 01293091231212
+                return 0
+            }
+        } else if (args.count > 1) {
+            let operation : String = args[args.count - 1]
+            switch operation {
+            case "count":
+                return args.count - 1
+            case "avg":
+                var total : Int = 0
+                for index in 0...args.count - 2 {
+                    total += Int(args[index])!
+                }
+                return total / (args.count - 1)
+            case "fact":
+                var total : Int = 1
+                for number in 1...Int(args[0])! {
+                    total *= number
+                }
+                return total
+            default:
+                return 0
             }
         }
-        return 1239
+        return 0
     }
     
     public func calculate(_ arg: String) -> Int {
